@@ -1,0 +1,24 @@
+zanimaux_animal:
+    resource: "@ZanimauxBundle/Resources/config/routing/animal.yml"
+    prefix:   /animal
+
+zanimaux_homepage:
+    path:     /
+    defaults: { _controller: ZanimauxBundle:Default:index }
+
+affiche:
+    path:     /affiche
+    defaults: { _controller: ZanimauxBundle:User:affiche }
+inscription:
+    path:     /inscrit
+    defaults: { _controller: ZanimauxBundle:User:inscrit }
+update:
+    path:     /update
+    defaults: { _controller: ZanimauxBundle:Refuge:update }
+
+refuge:
+    path:     /refuge
+    defaults: { _controller: ZanimauxBundle:Refuge:refuge }
+profil:
+    path:     /profil
+    defaults: { _controller: ZanimauxBundle:Refuge:profil }

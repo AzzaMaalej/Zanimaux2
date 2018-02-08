@@ -1,0 +1,24 @@
+animal_index:
+    path:     /
+    defaults: { _controller: "ZanimauxBundle:Animal:index" }
+    methods:  GET
+
+animal_show:
+    path:     /{idanimal}/show
+    defaults: { _controller: "ZanimauxBundle:Animal:show" }
+    methods:  GET
+
+animal_new:
+    path:     /new
+    defaults: { _controller: "ZanimauxBundle:Animal:new" }
+    methods:  [GET, POST]
+
+animal_edit:
+    path:     /{idanimal}/edit
+    defaults: { _controller: "ZanimauxBundle:Animal:edit" }
+    methods:  [GET, POST]
+
+animal_delete:
+    path:     /{idanimal}/delete
+    defaults: { _controller: "ZanimauxBundle:Animal:delete" }
+    methods:  DELETE

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Animals list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idanimal</th>
+                <th>Type</th>
+                <th>Etat</th>
+                <th>Nomanimal</th>
+                <th>Photoanimal</th>
+                <th>Age</th>
+                <th>Race</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for animal in animals %}
+            <tr>
+                <td><a href="{{ path('animal_show', { 'idanimal': animal.idanimal }) }}">{{ animal.idanimal }}</a></td>
+                <td>{{ animal.type }}</td>
+                <td>{{ animal.etat }}</td>
+                <td>{{ animal.nomanimal }}</td>
+                <td>{{ animal.photoanimal }}</td>
+                <td>{{ animal.age }}</td>
+                <td>{{ animal.race }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('animal_show', { 'idanimal': animal.idanimal }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('animal_edit', { 'idanimal': animal.idanimal }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('animal_new') }}">Create a new animal</a>
+        </li>
+    </ul>
+{% endblock %}
